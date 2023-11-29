@@ -1,0 +1,255 @@
+$primary-color: goldenrod;
+$secondary-color: white;
+$height-hf: 40px;
+$border-radius: 15%;
+$auto-margin:100px;
+$header-padding: 5px;
+$width: 85vw;
+
+
+body {
+    background-color: $secondary-color;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+header {
+    height: 30px;
+    width: 100%;
+     background-color: $secondary-color;
+     position: fixed;
+     top: 0%;
+     z-index: 1000;
+
+.header-container {
+    display: inline-flex;
+    justify-content: stretch;
+    width: 90%;
+    margin: auto;
+    height: 30px;    
+}
+#social-media {
+    display: inline-flex;
+    justify-content: flex-start;
+    margin:auto;
+    margin-right: 300px;
+    margin-left: 0;
+    padding-left: 0;
+    li a {
+        margin-left: 20px;
+        margin-right: 20px;
+        color: $primary-color;
+  }
+  }
+#contact {
+    display: inline-flex; 
+    justify-content: flex-end; 
+    margin: auto;
+    margin-right:0;
+}
+
+#call-container {
+    display: inline-flex;
+    overflow: hidden;
+    margin:auto;
+    justify-content: space-between;
+    p, i {
+      margin: auto;
+      font-size:small;
+      color:$primary-color
+}
+p{
+  padding-left: 5px;
+}
+}
+
+#time {
+    color: $primary-color;
+    display: inline-flex;
+    justify-content: flex-end;
+    margin: auto;
+    height:80%;
+    margin-right: 0;
+    padding-right: 0;
+    
+    #currentDateTime{
+        margin-right: 0;
+        padding-right: 0;
+        margin: auto;
+        color: $primary-color;
+    }
+}
+#flag{
+  margin:0 0 auto 50px;
+  height: 30px;
+  width:30px;
+  overflow: hidden;
+  img{
+    display: block;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+}
+nav {
+    height: $height-hf;
+    width: 100%;
+    background-color: $primary-color;
+    position:fixed;
+    z-index: 1000;
+    .burger-menu{
+      margin: auto 10px auto 10px;
+      border: solid 1px $secondary-color;
+      border-radius: 5px;
+      color: $secondary-color;
+      padding: 5px;
+      background-color: none;
+    }
+    .nav-container{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100vw;
+        margin: auto;
+        margin-left: 5px;
+        height: $height-hf;
+        #company-name{
+            font-size: x-large;
+            margin: -2px 500px auto 5px;
+            font-style: italic;
+            font-weight: bold;
+            color: $secondary-color;
+        }
+        ul {
+          display: flex;
+          justify-content: space-evenly;
+          margin: auto;
+          flex: 2;
+          margin-right: 0;
+        }
+        
+        ul li a {
+          text-decoration: none;
+          color: $secondary-color;
+          font-size: larger;
+        
+          &:hover {
+            background-color: $secondary-color;
+            color: $primary-color;
+            padding: 10px 30px 10px 30px;
+            text-decoration: none;
+          }
+        }
+    }
+
+    
+}
+  main{
+        margin:auto;
+        width: 100vw;
+        margin-top: 20px;
+}
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
+    margin: auto;
+    margin-top: 20px;
+    width: 100vw;
+    margin-left: 27px;
+
+}
+
+.image-grid img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border: 1px solid $primary-color;
+    border-radius: 1%;
+}
+
+#wig-banner{
+    height: 400px;
+    width: 100vw;
+    overflow:visible;
+    margin-top: 10px;
+    margin: auto;
+    img{
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+footer{
+    background-color: $primary-color;
+    margin: auto;
+    margin-right: 0;
+  }
+  .foot-container{
+    display: inline-flex;
+    justify-content: stretch;
+    margin: auto;
+}
+footer {
+    background-color: goldenrod;
+    margin: auto;
+    margin-right: 0;
+  }
+  
+  .foot-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin:auto 0 20px auto;
+    .footer-content{
+        margin-top: 20px;
+      display:flex;
+      flex-direction: column;
+      a, p{
+        text-decoration: none;
+        color: $secondary-color;
+        text-align: center;
+        margin-top: 10px;
+      }
+      a:hover{
+        color:blue;
+        text-decoration: wavy;
+      }
+    }
+  }
+    p{
+        color: $secondary-color;
+        text-align: center;
+        margin-top: 10px;   
+    }
+
+    @media only screen and (max-width: 600px) {
+      .nav-links {
+          display: none;
+      }
+  }
+
+  /* Styles for the burger menu icon */
+  #burger-icon {
+      display: none; /* Hide by default */
+      cursor: pointer;
+  }
+
+  /* Styles for the navigation links in small screen sizes */
+  @media only screen and (max-width: 600px) {
+      #burger-icon {
+          display: block; /* Display the burger icon */
+      }
+
+      .nav-links {
+          display: none; /* Hide the navigation links initially */
+      }
+
+      .nav-links.active {
+          display: block; /* Display the navigation links when active */
+      }
+  }
+
+  

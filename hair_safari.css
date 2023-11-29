@@ -1,0 +1,239 @@
+body {
+  background-color: white;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+header {
+  height: 30px;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0%;
+  z-index: 1000;
+}
+header .header-container {
+  display: inline-flex;
+  justify-content: stretch;
+  width: 90%;
+  margin: auto;
+  height: 30px;
+}
+header #social-media {
+  display: inline-flex;
+  justify-content: flex-start;
+  margin: auto;
+  margin-right: 300px;
+  margin-left: 0;
+  padding-left: 0;
+}
+header #social-media li a {
+  margin-left: 20px;
+  margin-right: 20px;
+  color: goldenrod;
+}
+header #contact {
+  display: inline-flex;
+  justify-content: flex-end;
+  margin: auto;
+  margin-right: 0;
+}
+header #call-container {
+  display: inline-flex;
+  overflow: hidden;
+  margin: auto;
+  justify-content: space-between;
+}
+header #call-container p, header #call-container i {
+  margin: auto;
+  font-size: small;
+  color: goldenrod;
+}
+header #call-container p {
+  padding-left: 5px;
+}
+header #time {
+  color: goldenrod;
+  display: inline-flex;
+  justify-content: flex-end;
+  margin: auto;
+  height: 80%;
+  margin-right: 0;
+  padding-right: 0;
+}
+header #time #currentDateTime {
+  margin-right: 0;
+  padding-right: 0;
+  margin: auto;
+  color: goldenrod;
+}
+header #flag {
+  margin: 0 0 auto 50px;
+  height: 30px;
+  width: 30px;
+  overflow: hidden;
+}
+header #flag img {
+  display: block;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  margin-left: 0;
+}
+
+nav {
+  height: 40px;
+  width: 100%;
+  background-color: goldenrod;
+  position: fixed;
+  z-index: 1000;
+}
+nav .burger-menu {
+  margin: auto 10px auto 10px;
+  border: solid 1px white;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  background-color: none;
+}
+nav .nav-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
+  margin: auto;
+  margin-left: 5px;
+  height: 40px;
+}
+nav .nav-container #company-name {
+  font-size: x-large;
+  margin: -2px 500px auto 5px;
+  font-style: italic;
+  font-weight: bold;
+  color: white;
+}
+nav .nav-container ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  flex: 2;
+  margin-right: 0;
+}
+nav .nav-container ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+}
+nav .nav-container ul li a:hover {
+  background-color: white;
+  color: goldenrod;
+  padding: 10px 30px 10px 30px;
+  text-decoration: none;
+}
+
+main {
+  margin: auto;
+  width: 100vw;
+  margin-top: 20px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5px;
+  margin: auto;
+  margin-top: 20px;
+  width: 100vw;
+  margin-left: 27px;
+}
+
+.image-grid img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  border: 1px solid goldenrod;
+  border-radius: 1%;
+}
+
+#wig-banner {
+  height: 400px;
+  width: 100vw;
+  overflow: visible;
+  margin-top: 10px;
+  margin: auto;
+}
+#wig-banner img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+footer {
+  background-color: goldenrod;
+  margin: auto;
+  margin-right: 0;
+}
+
+.foot-container {
+  display: inline-flex;
+  justify-content: stretch;
+  margin: auto;
+}
+
+footer {
+  background-color: goldenrod;
+  margin: auto;
+  margin-right: 0;
+}
+
+.foot-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: auto 0 20px auto;
+}
+.foot-container .footer-content {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.foot-container .footer-content a, .foot-container .footer-content p {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+.foot-container .footer-content a:hover {
+  color: blue;
+  text-decoration: wavy;
+}
+
+p {
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+}
+/* Styles for the burger menu icon */
+#burger-icon {
+  display: none; /* Hide by default */
+  cursor: pointer;
+}
+
+/* Styles for the navigation links in small screen sizes */
+@media only screen and (max-width: 600px) {
+  #burger-icon {
+    display: block; /* Display the burger icon */
+  }
+  .nav-links {
+    display: none; /* Hide the navigation links initially */
+  }
+  .nav-links.active {
+    display: block; /* Display the navigation links when active */
+  }
+}
