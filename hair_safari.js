@@ -17,28 +17,38 @@ function updateDateTime() {
 setInterval(updateDateTime, 1000);
 updateDateTime();
 
-document.getElementById('burger-icon').addEventListener('click', function() {
-  document.querySelector('.nav-links').classList.toggle('active');});
-   
 // Grid animation
 
-$(document).ready(function() {
-  $(".image-container").hover(
-      function() {
-          $(this).append("<div class='hover-text'>The features of each products is going to be listed here</div>").css({
-            'transform': 'scale(1.2)',
-            'transition': 'transform 1s ease-out',
-            'color':'goldenrod',
-            'text-shadow': '2%',
-            'opacity': '0.8'
-          })},
-      function() {
-          $(this).find('.hover-text').remove();
-          $(".image-container").css({
-            'transform': 'scale(1)',
-            'transition': 'transform 1s ease-out',
-            'opacity': '1'
+$(document).ready(function () {
+    $(".image-container").hover(
+        function () {
+            $(this).append("<div class='hover-text'>The features goes here</div>").css({
+                'transform': 'scale(1.2)',
+                'transition': 'transform 1s ease-out',
+                'color': 'goldenrod',
+                'text-shadow': '2%',
+                'opacity': '0.8'
+            });
+        },
+        function () {
+            $(this).find('.hover-text').remove();
+            $(this).css({
+                'transform': 'scale(1)',
+                'transition': 'transform 1s ease-out',
+                'opacity': '1'
+            });
           });
-      }
-  );
-});
+        });
+        //Toggle buger menu in small screen size
+        $(document).ready(function () {
+            function updateNavigation() {
+                        $('.burger-menu').click(function(){
+                          $('#small-screen').slideToggle("slow");
+                        });
+                      }; 
+                      updateNavigation();
+                      $(window).resize(function () {
+                        updateNavigation();
+                    });
+        });           
+        

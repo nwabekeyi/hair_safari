@@ -2,168 +2,177 @@ $primary-color: goldenrod;
 $secondary-color: white;
 $height-hf: 40px;
 $border-radius: 15%;
-$auto-margin:100px;
+$auto-margin: 100px;
 $header-padding: 5px;
 $width: 85vw;
 
-
 body {
     background-color: $secondary-color;
-    overflow-x: hidden;
-    margin: 0;
 }
 
 header {
-    height: 30px;
-    width: 100%;
-     background-color: $secondary-color;
-     position: fixed;
-     top: 0%;
-     z-index: 1000;
+  height: 30px;
+  width: 100vw;
+   background-color: $secondary-color;
+   position: fixed;
+   top: 0%;
+   z-index: 1000;
 
 .header-container {
-    display: inline-flex;
-    justify-content: stretch;
-    width: 90%;
-    margin: auto;
-    height: 30px;    
+  display: inline-flex;
+  justify-content: stretch;
+  width: 87%;
+  margin: auto;
+  height: 30px;    
 }
 #social-media {
-    display: inline-flex;
-    justify-content: flex-start;
-    margin:auto;
-    margin-right: 300px;
-    margin-left: 0;
-    padding-left: 0;
-    li a {
-        margin-left: 20px;
-        margin-right: 20px;
-        color: $primary-color;
-  }
-  }
+  display: inline-flex;
+  justify-content: flex-start;
+  margin:auto;
+  margin-right: 300px;
+  margin-left: 0;
+  padding-left: 0;
+  li a {
+      margin-left: 20px;
+      margin-right: 20px;
+      color: $primary-color;
+}
+}
 #contact {
-    display: inline-flex; 
-    justify-content: flex-end; 
-    margin: auto;
-    margin-right:0;
+  display: inline-flex; 
+  justify-content: flex-end; 
+  margin: auto;
+  margin-right:0;
 }
 
 #call-container {
-    display: inline-flex;
-    overflow: hidden;
-    margin:auto;
-    justify-content: space-between;
-    p, i {
-      margin: auto;
-      font-size:small;
-      color:$primary-color
+  display: inline-flex;
+  overflow: hidden;
+  margin:auto;
+  justify-content: space-between;
+  p, i {
+    margin: auto;
+    font-size:small;
+    color:$primary-color
 }
 p{
-  padding-left: 5px;
+padding-left: 5px;
 }
 }
 
 #time {
-    color: $primary-color;
-    display: inline-flex;
-    justify-content: flex-end;
-    margin: auto;
-    height:80%;
-    margin-right: 0;
-    padding-right: 0;
-    
-    #currentDateTime{
-        margin-right: 0;
-        padding-right: 0;
-        margin: auto;
-        color: $primary-color;
-    }
+  color: $primary-color;
+  display: inline-flex;
+  justify-content: flex-end;
+  margin: auto;
+  height:80%;
+  margin-right: 0;
+  padding-right: 0;
+  
+  #currentDateTime{
+      margin-right: 0;
+      padding-right: 0;
+      margin: auto;
+      color: $primary-color;
+  }
 }
 #flag{
-  margin:0 0 auto 50px;
-  height: 30px;
-  width:30px;
-  overflow: hidden;
-  img{
-    display: block;
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    margin-left: 0;
-  }
+margin:0 0 auto 50px;
+height: 30px;
+width:30px;
+overflow: hidden;
+img{
+  display: block;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  margin-left: 0;
+}
 }
 }
 nav {
-    height: $height-hf;
-    width: 100%;
-    background-color: $primary-color;
-    position:fixed;
-    z-index: 1000;
-    .burger-menu{
-      margin: auto 10px auto 10px;
-      border: solid 1px $secondary-color;
-      border-radius: 5px;
-      color: $secondary-color;
-      padding: 5px;
-      background-color: none;
-    }
-    .nav-container{
+  height: $height-hf;
+  width: 100%;
+  background-color: $primary-color;
+  position:fixed;
+  top:28px;
+  z-index: 1000;
+  .burger-menu{
+    display: none;
+  }
+  .nav-container{
+      display: flex;
+      justify-content: space-evenly;
+      width: 100vw;
+      margin: auto;
+      margin-left: 5px;
+      height: $height-hf;
+      #company-name{
+          font-size: x-large;
+          margin: auto 500px auto 5px;
+          font-style: italic;
+          font-weight: bold;
+          color: $secondary-color;
+      }
+      ul {
         display: flex;
         justify-content: space-evenly;
-        width: 100vw;
         margin: auto;
-        margin-left: 5px;
-        height: $height-hf;
-        #company-name{
-            font-size: x-large;
-            margin: -2px 500px auto 5px;
-            font-style: italic;
-            font-weight: bold;
-            color: $secondary-color;
-        }
-        ul {
-          display: flex;
-          justify-content: space-evenly;
-          margin: auto;
-          flex: 2;
-          margin-right: 0;
-        }
-        
-        ul li a {
+        flex: 2;
+        margin-right: 0;
+      }
+      
+      ul li a {
+        text-decoration: none;
+        color: $secondary-color;
+        font-size: larger;
+      
+        &:hover {
+          background-color: $secondary-color;
+          color: $primary-color;
+          padding: 10px 30px 10px 30px;
           text-decoration: none;
-          color: $secondary-color;
-          font-size: larger;
-        
-          &:hover {
-            background-color: $secondary-color;
-            color: $primary-color;
-            padding: 10px 30px 10px 30px;
-            text-decoration: none;
-          }
         }
-    }
+      }
+  }
+  #small-screen{
+    display: none;
+    ul li a {
+        text-decoration: none;
+        color: $secondary-color;
+        font-size: larger;
+        padding: 5px;
+        margin-top: 10px;
 
-    
+        
+      
+        &:hover {
+          background-color: $secondary-color;
+          color: $primary-color;
+          text-decoration: none;
+        }
+      }
+  }
 }
-  main{
-        margin:auto;
-        width: 100vw;
-        margin-top: 20px;
+
+main {
+    margin: auto;
+    width: 100%;
+    margin-top: 20px;
 }
+
 .image-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 5px;
-    margin: auto;
-    margin-top: 20px;
-    width: 100vw;
-    margin-left: 27px;
-
+    gap: 20px;
+    margin: 20px 0 20px 10px;
+    padding-right: 0;
+    width: 100%; 
 }
 
 .image-grid img {
-    width: 80%;
+    width: 80%;  
     height: 80%;
     object-fit: cover;
     border: 1px solid $primary-color;
@@ -173,83 +182,134 @@ nav {
 #wig-banner{
     height: 400px;
     width: 100vw;
-    overflow:visible;
-    margin-top: 10px;
+    overflow:hidden;
     margin: auto;
     img{
+      margin-top: 45px;
         display: block;
         height: 100%;
         width: 100%;
         object-fit: cover;
     }
 }
-footer{
+
+footer {
     background-color: $primary-color;
     margin: auto;
-    margin-right: 0;
   }
-  .foot-container{
-    display: inline-flex;
-    justify-content: stretch;
-    margin: auto;
-}
-footer {
-    background-color: goldenrod;
-    margin: auto;
-    margin-right: 0;
-  }
-  
-  .foot-container {
+
+.foot-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin:auto 0 20px auto;
-    .footer-content{
+    margin: auto 0 20px auto;
+    .footer-content {
         margin-top: 20px;
-      display:flex;
-      flex-direction: column;
-      a, p{
-        text-decoration: none;
-        color: $secondary-color;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        a, p {
+            text-decoration: none;
+            color: $secondary-color;
+            text-align: center;
+            margin-top: 10px;
+        }
+        a:hover {
+            color: blue;
+            text-decoration: wavy;
+        }
+    }
+}
+
+.copyright {
+    color: $secondary-color;
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 30px;
+}
+
+@media (max-width: 1070px) {
+    header {
+        .header-container {
+            align-items: flex-start;
+            min-width: 95%;
+            height: fit-content;
+            margin-top: 7px;
+        }
+
+        #time, #flag {
+            display: none;
+        }
+        #social-media {
+            margin-right: auto;
+        }
+    }
+
+    nav {
+        align-items: flex-start;
         margin-top: 10px;
-      }
-      a:hover{
-        color:blue;
-        text-decoration: wavy;
-      }
+        min-width: 50%;
+        height: fit-content;
+        position: absolute;
+        top: 20px;
+        z-index: 1000;
+        padding-bottom: 10px;
+
+        .nav-container {
+            align-items: flex-start;
+            margin-top: 10px;
+            width: 50vw;
+            #company-name {
+                display: block;
+                margin: auto;
+                margin-top: 0;
+            }
+            #navigation{
+                display:none;
+            }
+            #small-screen{
+                display: inline-flex;
+                flex-direction: column;
+              }
+        }
+        .burger-menu {
+            margin: 0px auto auto 10px;
+            border: solid 1px $secondary-color;
+            border-radius: 5px;
+            color: $secondary-color;
+            padding: 5px;
+            display: inline;
+
+            &:hover {
+                cursor: pointer;
+                padding: 6px;
+            }
+            &:active {
+                cursor: pointer;
+                border: 2px solid blue;
+            }
+        }
     }
-  }
-    p{
-        color: $secondary-color;
-        text-align: center;
-        margin-top: 10px;   
+
+    .banner {
+        min-width: 100%;
+        height: auto;
+        margin-top: 80px;
+        ma
+        #wig-banner {
+            height: 100%;
+            width: 100%;
+        }
     }
 
-    @media only screen and (max-width: 600px) {
-      .nav-links {
-          display: none;
-      }
-  }
-
-  /* Styles for the burger menu icon */
-  #burger-icon {
-      display: none; /* Hide by default */
-      cursor: pointer;
-  }
-
-  /* Styles for the navigation links in small screen sizes */
-  @media only screen and (max-width: 600px) {
-      #burger-icon {
-          display: block; /* Display the burger icon */
-      }
-
-      .nav-links {
-          display: none; /* Hide the navigation links initially */
-      }
-
-      .nav-links.active {
-          display: block; /* Display the navigation links when active */
-      }
-  }
-
-  
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        height: auto;
+        margin-top: 30px;
+    }
+    
+    .foot-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
